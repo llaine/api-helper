@@ -14,3 +14,5 @@ gem 'mini_magick'
 
 # Mail sender
 gem 'mailgun-ruby', require: 'mailgun'
+
+gem 'foreman'
