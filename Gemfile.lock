@@ -5,19 +5,39 @@ GEM
     connection_pool (2.2.0)
     cuba (3.6.0)
       rack (~> 1.6.0)
+    domain_name (0.5.20160310)
+      unf (>= 0.0.5, < 1.0.0)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
+    json (1.8.3)
+    mailgun-ruby (1.1.0)
+      json (~> 1.8)
+      rest-client (~> 1.6)
+    mime-types (2.99.1)
+    mini_magick (4.5.1)
+    netrc (0.11.0)
     oj (2.15.0)
     rack (1.6.4)
     redis (3.3.0)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     sidekiq (4.1.1)
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
       redis (~> 3.2, >= 3.2.1)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   cuba
+  mailgun-ruby
+  mini_magick
   oj
   sidekiq
 
