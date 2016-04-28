@@ -1,7 +1,7 @@
 FROM ruby:2.2.3-slim
 
 # Install essential Linux packages
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev postgresql-client imagemagick libmagic-dev libmagickwand-dev redis-server
+RUN apt-get update -qq && apt-get install -y build-essential imagemagick libmagic-dev libmagickwand-dev redis-server
 
 # Define where our application will live inside the image
 ENV APP_ROOT /var/www/api-helper
@@ -27,4 +27,4 @@ COPY . .
 
 ENV RACK_ENV=production
 
-CMD ['rackup -E ']
+CMD ['foreman start']
